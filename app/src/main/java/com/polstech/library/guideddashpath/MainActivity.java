@@ -22,12 +22,10 @@ public class MainActivity extends AppCompatActivity {
         final ImageView image4 = (ImageView) findViewById(R.id.img4);
 
         final GuidedView guidedView = (GuidedView) findViewById(R.id.gv);
-        guidedView.with(this);
-
-        guidedView.addViewPair(image1, image2);
-        guidedView.addViewPair(image2, image3);
-        guidedView.addViewPair(image3, image4);
-
-        guidedView.create();
+        guidedView.with(this)
+                .addViewPair(image1, image2)
+                .addViewPair(image2, image3)
+                .addViewPair(image3, image4)
+                .create();
     }
 }
